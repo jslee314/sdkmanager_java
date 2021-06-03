@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_100">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ver_5_per_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ver_95_per_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor_5_per_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor_95_per_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_exception_info"
+        android:textColor="@color/green_35"
+        android:fontFamily="@font/noto_sans_cjk_kr_bold"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="@+id/ver_5_per_guideline"
+        app:layout_constraintTop_toTopOf="@id/hor_5_per_guideline" />
+
+    <TextView
+        android:id="@+id/register_title_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black_20"
+        app:layout_constraintStart_toStartOf="@+id/ver_5_per_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/ver_95_per_guideline"
+        app:layout_constraintTop_toBottomOf="@id/dialog_title" />
+
+    <TextView
+        android:id="@+id/dialog_sub_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_exception_err_msg"
+        android:textColor="@color/black_20"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="@+id/ver_5_per_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/ver_95_per_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/register_title_line" />
+
+    <TextView
+        android:id="@+id/dialog_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/black_20"
+        android:fontFamily="@font/noto_sans_cjk_kr_regular"
+        android:includeFontPadding="false"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="@+id/ver_5_per_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/ver_95_per_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_sub_title"
+        app:layout_constraintBottom_toTopOf="@+id/ok_btn" />
+
+    <android.widget.Button
+        android:id="@+id/ok_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_after_background"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/common_confirm"
+        android:textColor="@color/white_100"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="@+id/ver_5_per_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/ver_95_per_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/hor_95_per_guideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

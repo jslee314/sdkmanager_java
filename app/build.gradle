@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.android.gms.oss-licenses-plugin'
 }
 
 android {
@@ -11,9 +12,13 @@ android {
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName '0.0.0'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
     }
 
     buildTypes {
@@ -36,4 +41,32 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    // material 디자인
+    implementation 'com.google.android.material:material:1.2.1'
+
+    // Lombok Library
+    def lombok_ver = "1.18.16"
+    implementation "org.projectlombok:lombok:$lombok_ver"
+    annotationProcessor "org.projectlombok:lombok:$lombok_ver"
+
+    // ViewModel and LiveData Library
+    def lifecycle_ver = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_ver"
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_ver"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_ver"
+
+    // Retrofit Library
+    def retrofit_Ver = "2.5.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_Ver"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_Ver"
+    implementation "com.squareup.retrofit2:retrofit-mock:$retrofit_Ver"
+
+    // glide Library
+    def glide_version = "4.11.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+    implementation "com.github.bumptech.glide:annotations:$glide_version"
+    implementation 'com.caverock:androidsvg:1.2.1'
 }

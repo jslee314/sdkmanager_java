@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.jslee.sdkmanager_java.loading.LoadingViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_100">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mainlogo_iv_le_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.044" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/text_ri_guideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.728"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mainlogo_iv_top_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.375" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mainlogo_iv_bot_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.519" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/status_tv_top_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.542" />
+
+        <ImageView
+            android:id="@+id/loading_iv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toBottomOf="@+id/mainlogo_iv_top_guide"
+            app:layout_constraintBottom_toTopOf="@+id/mainlogo_iv_bot_guide"
+            app:layout_constraintStart_toEndOf="@+id/mainlogo_iv_le_guide"
+            app:layout_constraintDimensionRatio="208:100" />
+
+        <TextView
+            android:id="@+id/loading_app_reset_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_cjk_kr_medium"
+            android:textColor="@color/gray_75"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toEndOf="@id/mainlogo_iv_le_guide"
+            app:layout_constraintEnd_toStartOf="@+id/text_ri_guideLine"
+            app:layout_constraintTop_toBottomOf="@+id/status_tv_top_guide"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
